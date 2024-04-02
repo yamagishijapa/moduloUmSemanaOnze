@@ -11,8 +11,8 @@ public class Nota {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String title;
-    private String content;
+    private String titulo;
+    private String conteudo;
     @ManyToOne
     @JoinColumn(name = "caderno_id")
     private Caderno caderno;
