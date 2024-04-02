@@ -19,6 +19,7 @@ public class CadernoService {
     public List<Caderno> listarCaderno(){
         return cadernoRepository.findAll();
     }
+
     public ResponseEntity<?> buscarCadernoPorId(Long cadernoId){
         if (!cadernoRepository.existsById(cadernoId)) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Caderno não encontrado com ID: " + cadernoId);
